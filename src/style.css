@@ -1,5 +1,57 @@
 body {
-  background-color: white;
-  color: darkolivegreen;
+  background-color: #c2d1ca;
+  color: #5f7582;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: 36px;
+  text-align: center;
+}
+h2 {
+  font-size: 30px;
+  margin: 2px 0;
+}
+select {
+  background-color: rgba(194, 209, 202, 0.09);
+  border-radius: 4px;
+  display: block;
+  font-size: 18px;
+  margin: 20px 0;
+  padding: 10px;
+  width: 100%;
+}
+.container {
+  background-color: #f5f7f2;
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 65px auto;
+  max-width: 650px;
+  padding: 30px;
+}
+.city {
+  border-bottom: 1px dashed;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.city:last-child {
+  border: none;
+}
+.date {
+  margin: 4px 0;
+  opacity: 0.7;
+}
+.time {
+  font-size: 48px;
+  font-weight: bold;
+}
+.time small {
+  font-size: 22px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+footer {
+  font-size: 20px;
   text-align: center;
 }
