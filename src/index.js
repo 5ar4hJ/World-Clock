@@ -19,5 +19,26 @@ function updateTime() {
     "h:mm:ss:SSS [<small>]A[</small>]"
   );
 }
+
+function updateCity(event) {
+  let timeZone = event.target.value;
+  let cityTime = moment().tz(timeZone);
+  let cityName = timeZone.replace("_", " ").replace("_", " ").split("/")[1];
+  cityElement = document.querySelector("#city");
+
+  cityElement.innerHTML = `<div class="city">
+          <div>
+            <h2>${cityName}</h2>
+            <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+          </div>
+          <div class="time">${cityTime.format(
+            "h:mm:ss:SSS [<small>]A[</small>]"
+          )}</div>
+        </div>`;
+}
+
 updateTime();
 setInterval(updateTime, 100);
+
+selectCitiesElement = document.querySelector("#cities");
+selectCitiesElement.addEventListener("change", updateCity);
